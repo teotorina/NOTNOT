@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://j38ieu1xko.png" type="Texture" id=2]
+[ext_resource path="res://Belka.png" type="Texture" id=3]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.552941, 0.956863, 0.529412, 1 )
+position = Vector2( 523.257, 302.341 )
+scale = Vector2( 9.57798, 6.54754 )
+texture = ExtResource( 3 )
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+margin_left = 100.0
+margin_top = 50.0
+margin_right = 924.0
+margin_bottom = 550.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" parent="Buttons" instance=ExtResource( 1 )]
+modulate = Color( 0.54902, 0.956863, 0.521569, 1 )
+self_modulate = Color( 0.607843, 0.941176, 0.658824, 1 )
+margin_top = 225.0
+margin_bottom = 275.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.945098, 0.972549, 0.929412, 1 )
+text = "New Game"
+
+[node name="j38ieu1xko" type="Sprite" parent="."]
+position = Vector2( 509.172, 182.098 )
+scale = Vector2( 1.07475, 1.27242 )
+texture = ExtResource( 2 )
