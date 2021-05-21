@@ -19,7 +19,7 @@ public class Win : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (score.GetComponent<Level>().score == 12)
+        if (score.GetComponent<Move>().score == 12)
         {
             winScreen.SetActive(true);
             Move pause = move.GetComponent<Move>();

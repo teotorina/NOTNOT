@@ -10,6 +10,7 @@ public class GoodAnswer : MonoBehaviour
         { 
             Move time = other.GetComponent<Move>();
             time.timeStart = true;
+            time.score += 1;
         }
     }
 }

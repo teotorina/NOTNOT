@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public GameObject scoreLevel;
+    public GameObject scoreMove;
     public Text scoreText; 
     // Start is called before the first frame update
     void Start()
     {
-        Level score = scoreLevel.GetComponent<Level>();
+        Move score = scoreMove.GetComponent<Move>();
         scoreText.text = score.score + "/" + "12";
     }
 
     // Update is called once per frame
     void Update()
     {
-        Level score = scoreLevel.GetComponent<Level>();
+        Move score = scoreMove.GetComponent<Move>();
         scoreText.text = score.score + "/" + "12";
     }
 }

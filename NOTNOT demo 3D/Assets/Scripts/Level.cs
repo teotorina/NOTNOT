@@ -197,8 +197,8 @@ public class Level : MonoBehaviour
 
             swapFlag();
             flag1 = spawnFlag(tablePos[1,0], tablePos[1,1], tablePos[1,2], tablePos[1,3], tablePos[1,4], tablePos[1,5], false, "g");
-            flag2 = spawnFlag(tablePos[2,0], tablePos[2,1], tablePos[2,2], tablePos[2,3], tablePos[2,4], tablePos[2,5], false, "p");
-            flag3 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], true, "b");
+            flag2 = spawnFlag(tablePos[2,0], tablePos[2,1], tablePos[2,2], tablePos[2,3], tablePos[2,4], tablePos[2,5], false, "b");
+            flag3 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], true, "p");
 
             score++;
             canSpawn = false;
@@ -230,7 +230,7 @@ public class Level : MonoBehaviour
 
         if (move.GetComponent<Move>().canMove == false && score == 5 && closeExit)
         {
-            flag4 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], false, "b");
+            flag4 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], false, "p");
             Destroy(flag4Copy);
             closeExit = false;
         }
@@ -343,7 +343,7 @@ public class Level : MonoBehaviour
 
         if (move.GetComponent<Move>().canMove == false && score == 10 && closeExit && leftMove == false)
         {
-            flag3 = spawnFlag(tablePos[6,0], tablePos[6,1], tablePos[6,2], tablePos[6,3], tablePos[6,4], tablePos[6,5], true, "r");
+            flag4 = spawnFlag(tablePos[6,0], tablePos[6,1], tablePos[6,2], tablePos[6,3], tablePos[6,4], tablePos[6,5], true, "r");
             Destroy(flag4Copy);
             closeExit = false;
         }
@@ -354,9 +354,9 @@ public class Level : MonoBehaviour
             tasks[11].SetActive(true);
 
             swapFlag();
-            flag1 = spawnFlag(tablePos[4,0], tablePos[4,1], tablePos[4,2], tablePos[4,3], tablePos[4,4], tablePos[4,5], true, "p");
-            flag2 = spawnFlag(tablePos[5,0], tablePos[5,1], tablePos[5,2], tablePos[5,3], tablePos[5,4], tablePos[5,5], true, "b");
-            flag3 = spawnFlag(tablePos[7,0], tablePos[7,1], tablePos[7,2], tablePos[7,3], tablePos[7,4], tablePos[7,5], true, "g");
+            flag1 = spawnFlag(tablePos[4,0], tablePos[4,1], tablePos[4,2], tablePos[4,3], tablePos[4,4], tablePos[4,5], false, "p");
+            flag2 = spawnFlag(tablePos[5,0], tablePos[5,1], tablePos[5,2], tablePos[5,3], tablePos[5,4], tablePos[5,5], false, "b");
+            flag3 = spawnFlag(tablePos[7,0], tablePos[7,1], tablePos[7,2], tablePos[7,3], tablePos[7,4], tablePos[7,5], false, "g");
 
             score++;
             canSpawn = false;
@@ -365,7 +365,7 @@ public class Level : MonoBehaviour
 
         if (move.GetComponent<Move>().canMove == false && score == 11 && closeExit && leftMove == false)
         {
-            flag4 = spawnFlag(tablePos[6,0], tablePos[6,1], tablePos[6,2], tablePos[6,3], tablePos[6,4], tablePos[6,5], false, "r");
+            flag4 = spawnFlag(tablePos[6,0], tablePos[6,1], tablePos[6,2], tablePos[6,3], tablePos[6,4], tablePos[6,5], true, "r");
             Destroy(flag4Copy);
             closeExit = false;
         }
@@ -375,10 +375,9 @@ public class Level : MonoBehaviour
             tasks[11].SetActive(false);
 
             swapFlag();
-            flag1 = spawnFlag(tablePos[7,0], tablePos[7,1], tablePos[7,2], tablePos[7,3], tablePos[7,4], tablePos[7,5], false, "p");
-            flag2 = spawnFlag(tablePos[9,0], tablePos[9,1], tablePos[9,2], tablePos[9,3], tablePos[9,4], tablePos[9,5], false, "b");
-            flag3 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], false, "g");
-            flag4 = spawnFlag(tablePos[8,0], tablePos[8,1], tablePos[8,2], tablePos[8,3], tablePos[8,4], tablePos[8,5], true, "g");
+            flag1 = spawnFlag(tablePos[11,0], tablePos[11,1], tablePos[11,2], tablePos[11,3], tablePos[11,4], tablePos[11,5], false, "b");
+            flag2 = spawnFlag(tablePos[0,0], tablePos[0,1], tablePos[0,2], tablePos[0,3], tablePos[0,4], tablePos[0,5], false, "r");
+            flag3 = spawnFlag(tablePos[8,0], tablePos[8,1], tablePos[8,2], tablePos[8,3], tablePos[8,4], tablePos[8,5], true, "g");
 
             score++;
             canSpawn = false;
@@ -387,7 +386,7 @@ public class Level : MonoBehaviour
 
         if (move.GetComponent<Move>().canMove == false && score == 12 && closeExit && leftMove == false)
         {
-            flag4 = spawnFlag(tablePos[0,0], tablePos[0,1], tablePos[0,2], tablePos[0,3], tablePos[0,4], tablePos[0,5], false, "r");
+            flag4 = spawnFlag(tablePos[6,0], tablePos[6,1], tablePos[6,2], tablePos[6,3], tablePos[6,4], tablePos[6,5], false, "r");
             Destroy(flag4Copy);
             closeExit = false;
         }
@@ -395,7 +394,7 @@ public class Level : MonoBehaviour
         if (move.GetComponent<Move>().stap == "w" && score == 8 && canSpawn)
         {
             tasks[8].SetActive(false);
-            tasks[13].SetActive(true);
+            tasks[12].SetActive(true);
 
             swapFlag();
             flag1 = spawnFlag(tablePos[0,0], tablePos[0,1], tablePos[0,2], tablePos[0,3], tablePos[0,4], tablePos[0,5], false, "p");
@@ -416,15 +415,15 @@ public class Level : MonoBehaviour
             closeExit = false;
         }
 
-        if (move.GetComponent<Move>().stap == "d" && score == 9 && leftMove && canSpawn && leftMove)
+        if (move.GetComponent<Move>().stap == "d" && score == 9 && canSpawn && leftMove)
         {
-            tasks[13].SetActive(false);
-            tasks[14].SetActive(true);
+            tasks[12].SetActive(false);
+            tasks[13].SetActive(true);
 
             swapFlag();
-            flag2 = spawnFlag(tablePos[10,0], tablePos[10,1], tablePos[10,2], tablePos[10,3], tablePos[10,4], tablePos[10,5], false, "b");
-            flag3 = spawnFlag(tablePos[4,0], tablePos[4,1], tablePos[4,2], tablePos[4,3], tablePos[4,4], tablePos[4,5], false, "r");
-            flag4 = spawnFlag(tablePos[9,0], tablePos[9,1], tablePos[9,2], tablePos[9,3], tablePos[9,4], tablePos[9,5], false, "p");
+            flag1 = spawnFlag(tablePos[10,0], tablePos[10,1], tablePos[10,2], tablePos[10,3], tablePos[10,4], tablePos[10,5], false, "b");
+            flag2 = spawnFlag(tablePos[4,0], tablePos[4,1], tablePos[4,2], tablePos[4,3], tablePos[4,4], tablePos[4,5], false, "r");
+            flag3 = spawnFlag(tablePos[9,0], tablePos[9,1], tablePos[9,2], tablePos[9,3], tablePos[9,4], tablePos[9,5], false, "p");
 
             score++;
             canSpawn = false;
@@ -438,15 +437,15 @@ public class Level : MonoBehaviour
             closeExit = false;
         }
 
-        if (move.GetComponent<Move>().stap == "a" && score == 10 && leftMove && canSpawn && leftMove)
+        if (move.GetComponent<Move>().stap == "a" && score == 10 && canSpawn && leftMove)
         {
-            tasks[14].SetActive(false);
-            tasks[15].SetActive(true);
+            tasks[13].SetActive(false);
+            tasks[14].SetActive(true);
 
             swapFlag();
             flag1 = spawnFlag(tablePos[0,0], tablePos[0,1], tablePos[0,2], tablePos[0,3], tablePos[0,4], tablePos[0,5], false, "r");
             flag2 = spawnFlag(tablePos[1,0], tablePos[1,1], tablePos[1,2], tablePos[1,3], tablePos[1,4], tablePos[1,5], false, "g");
-            flag4 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], true, "p");
+            flag3 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], true, "p");
 
             score++;
             canSpawn = false;
@@ -455,20 +454,19 @@ public class Level : MonoBehaviour
 
         if (move.GetComponent<Move>().canMove == false && score == 11 && closeExit && canSpawn && leftMove)
         {
-            flag4 = spawnFlag(tablePos[2,0], tablePos[2,1], tablePos[2,2], tablePos[2,3], tablePos[2,4], tablePos[2,5], true, "g");
+            flag4 = spawnFlag(tablePos[2,0], tablePos[2,1], tablePos[2,2], tablePos[2,3], tablePos[2,4], tablePos[2,5], false, "g");
             Destroy(flag4Copy);
             closeExit = false;
         }
 
-        if (move.GetComponent<Move>().stap == "s" && score == 11 && leftMove && canSpawn && leftMove)
+        if (move.GetComponent<Move>().stap == "s" && score == 11 && canSpawn && leftMove)
         {
-            tasks[15].SetActive(false);
+            tasks[14].SetActive(false);
 
             swapFlag();
-            flag1 = spawnFlag(tablePos[7,0], tablePos[7,1], tablePos[7,2], tablePos[7,3], tablePos[7,4], tablePos[7,5], true, "p");
-            flag2 = spawnFlag(tablePos[9,0], tablePos[9,1], tablePos[9,2], tablePos[9,3], tablePos[9,4], tablePos[9,5], false, "b");
-            flag3 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], false, "g");
-            flag4 = spawnFlag(tablePos[8,0], tablePos[8,1], tablePos[8,2], tablePos[8,3], tablePos[8,4], tablePos[8,5], false, "g");
+            flag1 = spawnFlag(tablePos[11,0], tablePos[11,1], tablePos[11,2], tablePos[11,3], tablePos[11,4], tablePos[11,5], false, "b");
+            flag2 = spawnFlag(tablePos[0,0], tablePos[0,1], tablePos[0,2], tablePos[0,3], tablePos[0,4], tablePos[0,5], false, "r");
+            flag3 = spawnFlag(tablePos[8,0], tablePos[8,1], tablePos[8,2], tablePos[8,3], tablePos[8,4], tablePos[8,5], false, "g");
 
             score++;
             canSpawn = false;
@@ -477,7 +475,7 @@ public class Level : MonoBehaviour
 
         if (move.GetComponent<Move>().canMove == false && score == 12 && closeExit && canSpawn && leftMove)
         {
-            flag4 = spawnFlag(tablePos[0,0], tablePos[0,1], tablePos[0,2], tablePos[0,3], tablePos[0,4], tablePos[0,5], false, "r");
+            flag3 = spawnFlag(tablePos[3,0], tablePos[3,1], tablePos[3,2], tablePos[3,3], tablePos[3,4], tablePos[3,5], false, "p");
             Destroy(flag4Copy);
             closeExit = false;
         }

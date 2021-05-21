@@ -13,6 +13,7 @@ public class Move : MonoBehaviour
     public GameObject timer;
     public bool timeStart = false;
     public bool pause = true;
+    public int score = 0;
 
     private float angle = 0;
     private int side;
@@ -29,7 +30,7 @@ public class Move : MonoBehaviour
           if (timeStart)
           {
               Timer time = timer.GetComponent<Timer>();
-              time.timeStart = 5f;
+              time.timeStart = 7f;
               timeStart = false;
           }
 
